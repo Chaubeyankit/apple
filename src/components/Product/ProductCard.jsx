@@ -5,7 +5,8 @@ import { PRODUCT_API } from "../../API/api";
 import { Link } from "react-router-dom";
 
 const ProductCard = () => {
-  const [product, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
     getAllProducts();
   }, []);
@@ -13,27 +14,28 @@ const ProductCard = () => {
   const getAllProducts = async () => {
     const response = await fetch(PRODUCT_API);
     const data = await response.json();
-    setProduct(data);
+    console.log();
+    setProducts(data.products);
   };
 
   return (
     <section className="text-gray-400 bg-gray-900 body-font px-2 grid grid-rows-1">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4">
-          {product.map((item) => {
+          {products.map((item) => {
             return (
               <div
                 key={item.id}
                 className="lg:w-1/4 md:w-1/2 p-4 w-full hover:cursor-pointer"
               >
                 <Link
-                  to={`/${item.title}`}
+                  to={`/product`}
                   className="block relative h-48 rounded overflow-hidden "
                 >
                   <img
                     alt="ecommerce"
                     className="object-cover object-center w-full h-full block"
-                    src={item.image}
+                    src={item.thumbnail}
                   />
                 </Link>
                 <div className="mt-4">

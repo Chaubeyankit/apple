@@ -111,7 +111,7 @@ const SearchInput = () => {
                 <IoIosArrowRoundForward />
               </div>
               <div className="text-slate-500 text-sm hover:text-slate-50 ">
-                <Link to={`/${item}`}>{item}</Link>
+                <Link to={`/product`}>{item}</Link>
               </div>
             </div>
           ))}
