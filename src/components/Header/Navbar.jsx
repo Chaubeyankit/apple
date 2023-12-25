@@ -43,7 +43,7 @@ export const Navbar = () => {
             <div className="hidden md:flex space-x-8">
               {headeritems.map((item) => (
                 <div key={item}>
-                  <Link to={`/${item}`} className="hover:text-slate-50">
+                  <Link to={`/product`} className="hover:text-slate-50">
                     {item}
                   </Link>
                 </div>
