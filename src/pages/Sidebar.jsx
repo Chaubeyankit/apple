@@ -21,7 +21,7 @@ const Sidebar = () => {
             <span className="mx-2 my-1">
               <IoIosArrowForward className="text-xl font-semibold" />
             </span>
-            <Link to={`/${item}`}>{item}</Link>
+            <Link to={`/product`}>{item}</Link>
           </li>
         ))}
       </ul>
