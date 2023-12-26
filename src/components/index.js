@@ -5,6 +5,9 @@ import SearchInput from "./container/SearchInput";
 import Product from "./Product/Product";
 import ProductCard from "./Product/ProductCard";
 import Sidebar from "../pages/Sidebar";
+import { ProductDetails } from "./Product/ProductDetails";
+
+
 
 export {
    Navbar,
@@ -13,5 +16,6 @@ export {
    SearchInput,
    Product,
    ProductCard,
+   ProductDetails,
    Sidebar,
 }
